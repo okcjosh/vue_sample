@@ -2,8 +2,8 @@ import axios from 'axios'
 
 /* eslint no-undef: "off" */
 const auth0 = new Auth0({
-  domain: 'YOUR_DOMAIN',
-  clientID: 'YOUR_CLIENT_ID',
+  domain: 'joshua-johnson.auth0.com',
+  clientID: 'Toh53c2xhGs6ByeTsxkxWnY3RxxtPENl',
   responseType: 'token',
   callbackURL: window.location.origin + '/'
 })

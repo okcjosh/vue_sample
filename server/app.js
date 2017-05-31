@@ -4,9 +4,9 @@ var bodyParser = require('body-parser');
 var cors = require('cors')
 var jwt = require('express-jwt')
 
-var jwtCheck = jwt({
-  secret: 'YOUR_CLIENT_SECRET',
-  audience: 'YOUR_CLIENT_ID'
+let jwtCheck = jwt({
+  secret: 'heJBKTcl3KPBA784fOMN8Yiag6uCkGz93G5XQ9RTGqaaq2Kz3XHsJ0WHWPcRLmjl',
+  audience: 'Toh53c2xhGs6ByeTsxkxWnY3RxxtPENl'
 })
 
 app.use(bodyParser.json());
@@ -26,9 +26,12 @@ app.get('/secured/ping', function(req, res) {
 })
 
 let data = [
- {"id":1, "name":"Project 1", "assignedTo":"Matt B", "priority": "High", "completed": false},
- {"id":2,"name":"Project 2", "assignedTo":"Matt B", "priority": "Medium", "completed": true},
- {"id":3,"name":"Project 3", "assignedTo":"Matt B", "priority": "Low", "completed": false}
+ {"id":1, "name":"Project 1", "assignedTo":"Matt W", "priority": "High", "completed": false},
+ {"id":2,"name":"Project 2", "assignedTo":"Matt W", "priority": "Medium", "completed": true},
+ {"id":3,"name":"Project 3", "assignedTo":"Matt W", "priority": "Low", "completed": false},
+ {"id":4, "name":"Project 4", "assignedTo":"Amber H", "priority": "High", "completed": false},
+ {"id":5,"name":"Project 5", "assignedTo":"Amber H", "priority": "Medium", "completed": true},
+ {"id":6,"name":"Project 6", "assignedTo":"Amber H", "priority": "Low", "completed": false}
 ]
 app.get('/secured/projects', function(req, res) {
   res.status(200).json(data)
