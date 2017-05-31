@@ -10,7 +10,7 @@
             <input class="input" v-model="pass" placeholder="password" type="password">
           </p>
           <p>
-            <button class="button" type="submit">Login</button>
+            <button class="button" type="submit"><i class="fa fa-key"></i>Login</button>
           </p>
         </form>
       </div>
