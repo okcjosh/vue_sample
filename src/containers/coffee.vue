@@ -1,5 +1,5 @@
 <template>
-	
+
 </template>
 
 <script>
@@ -7,7 +7,7 @@
 	const Snap = require(`imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js`);
 	const sv = require('./../assets/demo.svg');
 	
-	window.onload = function() {
+	const drawSnap = function() {
 		var s = Snap(1000, 800),
 			p = 100 / 30,
 			h = 250,
@@ -353,7 +353,15 @@
 		}
 	};
 	export default {
-		name: 'coffee'
+		name: 'coffee',
+		created: () => {
+			console.log('after create add svg to dom');
+			drawSnap();
+		},
+		beforeDestroy: () => {
+			console.log('before destroy remove svg from dom');
+			Array.from(document.querySelectorAll('svg')).forEach(svg => svg.remove());
+		}
 	}
 </script>
 
