@@ -9,7 +9,10 @@ import dashboard from './containers/dashboard.vue'
 import projects from './containers/projects.vue'
 import auth0Api from './containers/auth0Api.vue'
 import bash from './containers/bash.vue'
-import reddit from './containers/reddit.vue'
+import svg from './containers/svg.vue'
+import cats from './containers/cats.vue'
+import game from './containers/game.vue'
+import coffee from './containers/coffee.vue'
 import auth from './auth'
 
 // application routes
@@ -20,7 +23,24 @@ const routes = [
   { path: '/projects', component: projects, beforeEnter: auth.requireAuth },
   { path: '/api', component: auth0Api, beforeEnter: auth.requireAuth },
   { path: '/bash', component: bash, beforeEnter: auth.requireAuth },
-  { path: '/reddit', component: reddit, beforeEnter: auth.requireAuth }
+  { path: '/svg',
+    component: svg,
+    beforeEnter: auth.requireAuth,
+    children: [
+      { path: 'coffee',
+        component: coffee,
+        beforeEnter: auth.requireAuth
+      },
+      { path: 'game',
+        component: game,
+        beforeEnter: auth.requireAuth
+      },
+      { path: 'cats',
+        component: cats,
+        beforeEnter: auth.requireAuth
+      }
+    ]
+  }
 ]
 
 // export router instance

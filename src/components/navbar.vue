@@ -13,8 +13,8 @@
       <router-link class="nav-item is-tab" to="/bash">
         <i class="fa fa-terminal"></i> Bash Treats
       </router-link>
-      <router-link class="nav-item is-tab" to="/reddit">
-        <i class="fa fa-reddit fa-lg" aria-hidden="true"></i> Reddit
+      <router-link class="nav-item is-tab" to="/svg">
+        <i class="fa fa-paint-brush" aria-hidden="true"></i> SVG
       </router-link>
       <router-link class="nav-item is-tab" to="/api">
         <i class="fa fa-lock"></i> Auth0 API
