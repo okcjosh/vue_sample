@@ -43,7 +43,7 @@ app.post('/secured/projects', function (req, res) {
   let project = {
     'id': newId,
     'name': 'Project ' + newId,
-    'assignedTo': 'Someone Else',
+    'assignedTo': 'Josh',
     'priority': 'Medium',
     'completed': false
   }

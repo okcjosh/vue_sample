@@ -1,16 +1,5 @@
-<!--suppress ALL -->
-<template lang='html'>
-  <div id='dashboard'>
-    Dashboard content will go here
-  </div>
-</template>
-<script>
-export default {
-  name: 'dashboard'
-}
 
 import Snap from 'snapsvg-cjs'
-const demosvg = require('/Users/joshuajohnson/untitled/vuesetup-auth0-vuex/src/containers/demo.svg')
 window.onload = function () {
   const s = Snap(1000, 800)
   const p = 100 / 30
@@ -26,7 +15,7 @@ window.onload = function () {
   const gcoffee = 'l()#60544F-#8c7a73:50-#60544F:50-#60544F'
   const gwater = 'l()#B4D6DB-#D6EDEE:50-#B4D6DB:50-#B4D6DB'
 
-  Snap.load(demosvg, function (f) {
+  Snap.load('./demo.svg', function (f) {
     const top = f.select('#top')
     const bot = f.select('#bottom')
     const tap = f.select('#tap')
@@ -42,11 +31,11 @@ window.onload = function () {
       r: f.select('#pie-chart circle').attr('r'),
       coffee: f.select('#legend text'),
       water: f.selectAll('#legend text')[1],
-      title: f.selectAll('#legend text')[2]
-      // waterBox: f.select('#legend rect:nth-child(2)')
+      title: f.selectAll('#legend text')[2],
+      waterBox: f.select('#legend rect:nth-child(2)')
     }
     const angle = 0
-    let lastAngle = this.lastAngle
+    const lastAngle = this.lastAngle
     const startAngle = this.startAngle
     const leadOpenPath = lead.attr('d')
     const leadClosedPath = f.select('#lead-target').attr('d')
@@ -351,46 +340,3 @@ window.onload = function () {
     }).animate({cy: y - 30, opacity: 0}, 1000, callback)
   }
 }
-
-</script>
-
-
-<style media='screen'>
-  body {
-    background: #fff;
-    margin: 0;
-    padding: 0;
-  }
-  .shape {
-    fill: none;
-    stroke: #60544F;
-  }
-  .outline,
-  .doors {
-    fill: #F4EEE6;
-    stroke: #60544F;
-    stroke-width: 2pt;
-  }
-  .water {
-    fill: #D6EDEE;
-    stroke: #60544F;
-  }
-  .water-cut {
-    fill: #B4D6DB;
-  }
-  .milk {
-    fill: #fff;
-    stroke: #60544F;
-  }
-  .milk-cut {
-    fill: #F4EEE6;
-  }
-  .coffee {
-    fill: #60544F;
-    stroke: #60544F;
-  }
-  .coffee-cut {
-    fill: #60544F;
-  }
-</style>
-

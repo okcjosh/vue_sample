@@ -12,17 +12,6 @@
 </template>
 <script>
 import axios from 'axios'
-// eslint-disable-next-line no-unused-vars
-// import ConsoleLogHTML from 'console-log-html'
-// ConsoleLogHTML.connect(document.getElementById('myULContainer'))
-// ConsoleLogHTML.disconnect()
-// (function () {
-// eslint-disable-next-line no-unused-vars
-//  let ConsoleLogHTML = require('console-log-html')
-//  ConsoleLogHTML.connect(document.getElementById('myULContainer'))
-//  ConsoleLogHTML.disconnect()
-//  console.log('foo')
-// })()
 export default {
   name: 'auth0Api',
   methods: {
