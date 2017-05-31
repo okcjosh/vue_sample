@@ -12,7 +12,14 @@
 
 
 <script>
+  import Game from './game'
+  import Coffee from './coffee'
+  import Cats from './cats'
   export default {
+    components: {
+      Coffee,
+      Game,
+      Cats},
     name: 'svg'
   }
 </script>
