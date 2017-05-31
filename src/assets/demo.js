@@ -1,5 +1,5 @@
-
 import Snap from 'snapsvg-cjs'
+const demosvg = require('/Users/joshuajohnson/untitled/vuesetup-auth0-vuex/src/containers/demo.svg')
 window.onload = function () {
   const s = Snap(1000, 800)
   const p = 100 / 30
@@ -15,7 +15,7 @@ window.onload = function () {
   const gcoffee = 'l()#60544F-#8c7a73:50-#60544F:50-#60544F'
   const gwater = 'l()#B4D6DB-#D6EDEE:50-#B4D6DB:50-#B4D6DB'
 
-  Snap.load('./demo.svg', function (f) {
+  Snap.load(demosvg, function (f) {
     const top = f.select('#top')
     const bot = f.select('#bottom')
     const tap = f.select('#tap')
@@ -31,11 +31,11 @@ window.onload = function () {
       r: f.select('#pie-chart circle').attr('r'),
       coffee: f.select('#legend text'),
       water: f.selectAll('#legend text')[1],
-      title: f.selectAll('#legend text')[2],
-      waterBox: f.select('#legend rect:nth-child(2)')
+      title: f.selectAll('#legend text')[2]
+      // waterBox: f.select('#legend rect:nth-child(2)')
     }
     const angle = 0
-    const lastAngle = this.lastAngle
+    let lastAngle = this.lastAngle
     const startAngle = this.startAngle
     const leadOpenPath = lead.attr('d')
     const leadClosedPath = f.select('#lead-target').attr('d')
