@@ -15,6 +15,8 @@
   "dependencies": {
     "axios": "^0.15.3",
     "console-log-html": "^2.0.2",
+    "imports-loader": "^0.7.1",
+    "snapsvg": "^0.5.1",
     "snapsvg-cjs": "0.0.4",
     "vue": "^2.1.7",
     "vue-resource": "^1.0.3",
